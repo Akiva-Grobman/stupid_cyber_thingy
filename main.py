@@ -14,8 +14,6 @@ def cyber_rain(window):
     curses.curs_set(curses.A_INVIS)
     init_background()
     while True:
-        global prints
-        prints += 1
         update_background(window)
         draw_text(display_text, window)
         window.refresh()
