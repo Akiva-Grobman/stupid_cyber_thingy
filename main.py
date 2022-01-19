@@ -35,7 +35,6 @@ def init_background():
 
 
 def update_background(window):
-    window.clear()
     curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
     background_color = curses.color_pair(1)
     global counter
@@ -46,6 +45,7 @@ def update_background(window):
         init_background()
     for index in range(counter, counter + curses.LINES - 1):
         background = f'{background}\n{display_background[index]}'
+    window.clear()
     window.addstr(0, 0, background, background_color)
 
 
